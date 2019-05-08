@@ -10,65 +10,75 @@ import './index.less';
 const { Content } = Layout;
 
 /**
- * 工具条
- */
+ * Toolbar
+ */
 @connect()
 export default class extends BaseComponent {
-  render() {
-    const columns = createColumns(this);
+	render() {
+		const columns = createColumns(this);
 
-    const searchBarProps = {
-      columns,
-      onSearch: (values) => {
-        console.log(values)
-      }
-    };
+		const searchBarProps = {
+			columns,
+			onSearch: (values) => {
+				console.log(values);
+			}
+		};
 
-    return (
-      <Layout className="full-layout page toolbar-page">
-        <Content>
-          <Panel title="基本用法">
-            <Toolbar 
-              className="toolbar-demo"
-              appendLeft={
-                <Button.Group>
-                  <Button type="primary"><Icon type="plus" />新增</Button>
-                  <Button><Icon type="delete" />删除</Button>
-                </Button.Group>
-              }
-            />
-          </Panel>
-          <Panel title="组合SearchBar">
-            <Toolbar 
-              className="toolbar-demo"
-              appendLeft={
-                <Button.Group>
-                  <Button type="primary"><Icon type="plus" />新增</Button>
-                  <Button><Icon type="delete" />删除</Button>
-                </Button.Group>
-              }
-            >
-              <SearchBar {...searchBarProps} />
-            </Toolbar>
-          </Panel>
-          <Panel title="组合SearchBar，并可下拉展示更多">
-            <Toolbar 
-              className="toolbar-demo"
-              appendLeft={
-                <Button.Group>
-                  <Button type="primary"><Icon type="plus" />新增</Button>
-                  <Button><Icon type="delete" />删除</Button>
-                </Button.Group>
-              }
-              pullDown={
-                <SearchBar type="grid" {...searchBarProps} />
-              }
-            >
-              <SearchBar {...searchBarProps} group='1' />
-            </Toolbar>
-          </Panel>
-        </Content>
-      </Layout>
-    );
-  }
+		return (
+			<Layout className="full-layout page toolbar-page">
+				        <Content>
+					          <Panel title="Basic Usage">
+						            <Toolbar
+							className="toolbar-demo"
+							appendLeft={
+								<Button.Group>
+									                  <Button type="primary">
+										<Icon type="plus" />Add
+									</Button>
+									                  <Button>
+										<Icon type="delete" />delete
+									</Button>
+								</Button.Group>
+							}
+						/>
+					</Panel>
+					          <Panel title="Combination SearchBar">
+						            <Toolbar
+							className="toolbar-demo"
+							appendLeft={
+								<Button.Group>
+									                  <Button type="primary">
+										<Icon type="plus" />Add
+									</Button>
+									                  <Button>
+										<Icon type="delete" />delete
+									</Button>
+								</Button.Group>
+							}
+						>
+							              <SearchBar {...searchBarProps} />
+						</Toolbar>
+					</Panel>
+					          <Panel title="Combine SearchBar and drop down to show more">
+						            <Toolbar
+							className="toolbar-demo"
+							appendLeft={
+								<Button.Group>
+									                  <Button type="primary">
+										<Icon type="plus" />Add
+									</Button>
+									                  <Button>
+										<Icon type="delete" />delete
+									</Button>
+								</Button.Group>
+							}
+							pullDown={<SearchBar type="grid" {...searchBarProps} />}
+						>
+							              <SearchBar {...searchBarProps} group="1" />
+						</Toolbar>
+					</Panel>
+				</Content>
+			</Layout>
+		);
+	}
 }

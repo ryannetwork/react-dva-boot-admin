@@ -78,7 +78,7 @@ export default class extends BaseComponent {
   onSelectTreeNode = (selectedKeys, info) => {
     console.log('onSelect', selectedKeys);
 
-    // 模拟请求
+// simulation request
     const { dispatch, datatable } = this.props;
     const { pageData } = datatable;
     dispatch({
@@ -105,7 +105,7 @@ export default class extends BaseComponent {
     form.validateFields((err, values) => {
       if (!err) {
         console.log('save:', values, record);
-        // 演示模拟改变数据
+        // 
         const { dataList } = this.props.datatable;
         dataList.list = dataList.list.map(item => {
           if (item.id === record.id) {
@@ -202,26 +202,27 @@ export default class extends BaseComponent {
     return (
       <Layout className="full-layout page datatable-page">
         <Content>
-          <Panel title="说明">
-            <h3>DataTable 用法</h3>
+          <Panel title="Description">
+            <h3>DataTable usage</h3>
             <p>
-              DataTable通常结合<Link to="/column">Columns</Link>
-              来使用，由Columns定义其数据结构，支持多种类型数据，扩展自antd的Table组件，可以使用Table的api。
-            </p>
+              DataTable is usually combined with<Link to="/column">Columns</Link>
+              To use, the data structure defined by Columns, support multiple types of data, extended from the antd Table component, you can use the Table api.
+
+                      </p>
           </Panel>
           <Row gutter={20}>
             <Col span={12}>
-              <Panel title="基本用法">
+              <Panel title="Basic usage">
                 <DataTable {...dataTableProps1} />
               </Panel>
             </Col>
             <Col span={12}>
-              <Panel title="内部分页">
+              <Panel title="Inner page">
                 <DataTable pagination {...dataTableProps1} />
               </Panel>
             </Col>
           </Row>
-          <Panel title="外部分页">
+          <Panel title="External page">
             <DataTable {...dataTableProps1} />
             <div className="footer">
               <Pagination {...dataTableProps1} />
@@ -229,26 +230,26 @@ export default class extends BaseComponent {
           </Panel>
           <Row gutter={20}>
             <Col span={12}>
-              <Panel title="行号,初始值">
+              <Panel title="Line number, initial value">
                 <DataTable {...dataTableProps2} selectedRowKeys={[1, 2, 4]} />
               </Panel>
             </Col>
             <Col span={12}>
-              <Panel title="列提示&宽度">
+              <Panel title="Column hint & width">
                 <DataTable {...dataTableProps3} />
               </Panel>
             </Col>
           </Row>
           <Row gutter={20}>
             <Col span={6}>
-              <Panel title="数据字典&单选">
+              <Panel title="Data Dictionary & Radio">
                 <DataTable {...dataTableProps4} />
               </Panel>
             </Col>
             <Col span={18}>
-              <Panel title="左侧树联动">
+              <Panel title="Left tree linkage">
                 <SideLayout
-                  title="组织机构"
+                  title="organization"
                   sideContent={
                     <Tree onSelect={this.onSelectTreeNode}>
                       {this.renderTreeNodes(deptTreeData)}
@@ -262,7 +263,7 @@ export default class extends BaseComponent {
           </Row>
           <Row gutter={20}>
             <Col span={10}>
-              <Panel title="前台分页" height={500} scroll>
+              <Panel title="Front page paging" height={500} scroll>
                 <DataTable pagination={{ pageSize: 20 }} {...dataTableProps5} />
               </Panel>
             </Col>
@@ -277,7 +278,7 @@ export default class extends BaseComponent {
           </Row>
           <Row gutter={20}>
             <Col span={12}>
-              <Panel title="可编辑的行，用法与Form相似" height={500} scroll>
+              <Panel title="Editable line, usage is similar to Form" height={500} scroll>
                 <Editable pagination={{ pageSize: 20 }} {...dataTableProps7} />
               </Panel>
             </Col>
