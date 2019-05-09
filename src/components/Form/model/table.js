@@ -200,14 +200,14 @@ class TableControlled extends Component {
                 ))
               ) : (
                 <Option key="_selected" value="_selected">
-                  已选择{rows.length}项
+                  chosen{rows.length}item
                 </Option>
               )}
             </Select>
           </div>
           <Modal
             className="antui-table-modal"
-            title={'请选择' + otherProps.title}
+            title={'please choose' + otherProps.title}
             visible={visible}
             width={modal.width || 600}
             onCancel={this.hideModal}
@@ -220,10 +220,10 @@ class TableControlled extends Component {
                 {...dataTableProps}
               />,
               <Button key="back" onClick={this.hideModal}>
-                取消
+                cancel
               </Button>,
               <Button key="submit" type="primary" onClick={this.onSubmit}>
-                确定
+                Submit
               </Button>
             ]}
             {...modal}
@@ -291,7 +291,7 @@ export default ({
   }
 
   const props = {
-    placeholder: placeholder || `请选择${otherProps.title}`,
+    placeholder: placeholder || `please choose ${otherProps.title}`,
     ...otherProps
   };
 

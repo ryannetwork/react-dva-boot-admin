@@ -84,7 +84,7 @@ class TransferControlled extends Component {
       <Transfer
         {...otherProps}
         dataSource={dataSource}
-        titles={['源', '目标']}
+        titles={['source', 'aims']}
         targetKeys={value}
         onChange={this.triggerChange}
         render={item => item.title || item.label}
@@ -116,12 +116,12 @@ class TransferControlled extends Component {
           </div>
           <Modal
             className="antui-transfer-modal"
-            title={'请选择' + title}
+            title={'please choose' + title}
             visible={visible}
             onOk={this.onSubmit}
             onCancel={this.hideModal}
-            okText="确定"
-            cancelText="取消"
+            okText="Ok"
+            cancelText="Cancel"
             {...modal}
           >
             {comp}
@@ -179,7 +179,7 @@ export default ({
   }
 
   const props = {
-    placeholder: placeholder || `请选择${otherProps.title}`,
+    placeholder: placeholder || `please choose ${otherProps.title}`,
     ...otherProps
   };
 

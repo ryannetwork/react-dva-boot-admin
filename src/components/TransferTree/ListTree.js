@@ -40,7 +40,7 @@ export default class ListTree extends React.Component {
   state = {
     expandedKeys: [],
     autoExpandParent: true,
-    searchList: [],
+    searchList: []
   };
 
   handleFilter = value => {
@@ -137,7 +137,10 @@ export default class ListTree extends React.Component {
     if (info.selected && info.node.props.dataRef) {
       if (loadData && !info.node.props.dataRef.isLeaf) {
         return;
-      } else if (info.node.props.dataRef.children && info.node.props.dataRef.children.length) {
+      } else if (
+        info.node.props.dataRef.children &&
+        info.node.props.dataRef.children.length
+      ) {
         this.onExpand([info.node.props.eventKey], info);
         return;
       }
@@ -232,7 +235,7 @@ export default class ListTree extends React.Component {
                 prefixCls={`${prefixCls}-search`}
                 onChange={this.handleFilter}
                 handleClear={this.handleClear}
-                placeholder={searchPlaceholder || '请输入搜索内容'}
+                placeholder={searchPlaceholder || 'Enter search content'}
               />
             </div>
           ) : null}
@@ -249,7 +252,7 @@ export default class ListTree extends React.Component {
                 {loading ? (
                   <Spin spinning={loading} />
                 ) : (
-                  notFoundContent || '列表为空'
+                  notFoundContent || 'List is empty'
                 )}
               </div>
             )}

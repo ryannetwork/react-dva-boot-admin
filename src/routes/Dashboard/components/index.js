@@ -13,7 +13,7 @@ const { Chart, Axis, Geom, Tooltip, Legend, Coord, Label } = G2;
 const rankingListData = [];
 for (let i = 0; i < 7; i += 1) {
   rankingListData.push({
-    title: `工专路 ${i} 号店`,
+    title: `Engineering road ${i} Shop`,
     total: 323234
   });
 }
@@ -44,7 +44,7 @@ export default class Dashboard extends BaseComponent {
                 <h2>
                   <b>99+</b>
                 </h2>
-                <h5 className="text-muted">微信</h5>
+                <h5 className="text-muted">WeChat</h5>
               </Panel>
             </Col>
             <Col md={6}>
@@ -68,16 +68,16 @@ export default class Dashboard extends BaseComponent {
           </Row>
           <Row>
             <Col>
-              <Panel title="数据面板组件" height={300}>
+              <Panel title="Data panel component" height={300}>
                 <div className="flex">
                   <div className="flex-auto-hidden flex flex-column">
-                    <h4 className="flex-none">销售额分布</h4>
+                    <h4 className="flex-none">Sales distribution</h4>
                     <div className="flex-auto-hidden">
                       <Bar2 data={bar2} />
                     </div>
                   </div>
                   <div className="flex-none sales-order">
-                    <h4>门店销售额排名</h4>
+                    <h4>Store sales ranking</h4>
                     <ul>
                       {rankingListData.map((item, i) => (
                         <li key={item.title}>
@@ -94,17 +94,17 @@ export default class Dashboard extends BaseComponent {
           </Row>
           <Row gutter={20}>
             <Col md={8}>
-              <Panel title="折线图" height={260}>
+              <Panel title="line chart" height={260}>
                 <Line1 />
               </Panel>
             </Col>
             <Col md={8}>
-              <Panel title="饼图" height={260}>
+              <Panel title="Pie chart" height={260}>
                 <Pie1 />
               </Panel>
             </Col>
             <Col md={8}>
-              <Panel title="柱状图" height={260}>
+              <Panel title="Histogram" height={260}>
                 <Bar1 data={bar1} />
               </Panel>
             </Col>
@@ -141,18 +141,18 @@ const Bar2 = props => {
   dv.transform({
     type: 'fold',
     fields: ['Jan.', 'Feb.', 'Mar.', 'Apr.', 'May.', 'Jun.', 'Jul.', 'Aug.'], // 展开字段集
-    key: '月份', // key字段
-    value: '月均降雨量' // value字段
+    key: 'month', // key字段
+    value: 'Average monthly rainfall' // value字段
   });
   return (
     <Chart data={dv}>
-      <Axis name="月份" />
-      <Axis name="月均降雨量" />
+      <Axis name="month" />
+      <Axis name="Average monthly rainfall" />
       <Legend />
       <Tooltip crosshairs={{ type: 'y' }} />
       <Geom
         type="interval"
-        position="月份*月均降雨量"
+        position="month*Average monthly rainfall"
         color={'name'}
         adjust={[{ type: 'dodge', marginRatio: 1 / 32 }]}
       />
@@ -162,11 +162,11 @@ const Bar2 = props => {
 
 const Pie1 = props => {
   const data = [
-    { item: '事例一', count: 40 },
-    { item: '事例二', count: 21 },
-    { item: '事例三', count: 17 },
-    { item: '事例四', count: 13 },
-    { item: '事例五', count: 9 }
+    { item: 'Case 1', count: 40 },
+    { item: 'Case 2', count: 21 },
+    { item: 'Case 3', count: 17 },
+    { item: 'Case 4', count: 13 },
+    { item: 'Case 5', count: 9 }
   ];
 
   const dv = new DataSet.DataView();
@@ -195,7 +195,7 @@ const Pie1 = props => {
       />
       <Tooltip
         showTitle={false}
-        itemTpl="<li><span style=&quot;background-color:{color};&quot; class=&quot;g2-tooltip-marker&quot;></span>{name}: {value}</li>"
+        itemTpl='<li><span style="background-color:{color};" class="g2-tooltip-marker"></span>{name}: {value}</li>'
       />
       <Geom
         type="intervalStack"

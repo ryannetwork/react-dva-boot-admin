@@ -53,7 +53,7 @@ export default ({
   delete otherProps.render;
 
   const props = {
-    placeholder: placeholder || `请输入${otherProps.title}`,
+    placeholder: placeholder || `please enter ${otherProps.title}`,
     ...otherProps
   };
 

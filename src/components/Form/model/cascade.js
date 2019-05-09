@@ -69,7 +69,7 @@ export default ({
   }
 
   const props = {
-    placeholder: placeholder || `请选择${otherProps.title}`,
+    placeholder: placeholder || `please choose ${otherProps.title}`,
     ...otherProps
   };
 
@@ -77,7 +77,5 @@ export default ({
     props.getPopupContainer = getPopupContainer;
   }
 
-  return getFieldDecorator(name, formFieldOptions)(
-    <Cascader {...props} />
-  );
+  return getFieldDecorator(name, formFieldOptions)(<Cascader {...props} />);
 };

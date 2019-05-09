@@ -58,9 +58,9 @@ class AutoCompleteControlled extends Component {
     } else {
       this.setState({
         value
-      })
+      });
     }
-    
+
     if (loadData) {
       this.handleSearch(value);
     }
@@ -191,7 +191,7 @@ export default ({
   }
 
   const props = {
-    placeholder: placeholder || `请输入${otherProps.title}`,
+    placeholder: placeholder || `please enter${otherProps.title}`,
     ...otherProps
   };
 

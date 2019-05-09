@@ -49,7 +49,7 @@ export const TreeSelectForm = ({
   }
 
   const props = {
-    placeholder: placeholder || `请选择${otherProps.title}`,
+    placeholder: placeholder || `please choose ${otherProps.title}`,
     ...otherProps
   };
 
@@ -57,9 +57,7 @@ export const TreeSelectForm = ({
     props.getPopupContainer = getPopupContainer;
   }
 
-  return getFieldDecorator(name, formFieldOptions)(
-    <TreeSelect {...props} />
-  );
+  return getFieldDecorator(name, formFieldOptions)(<TreeSelect {...props} />);
 };
 
 export default TreeSelectForm;

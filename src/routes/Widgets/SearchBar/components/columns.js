@@ -3,7 +3,7 @@ import { Input, Icon } from 'antd';
 
 export const columns1 = [
   {
-    title: '角色类型',
+    title: 'roleType',
     name: 'roleType',
     dict: [
       { code: '1', codeName: '111' },
@@ -15,12 +15,12 @@ export const columns1 = [
     }
   },
   {
-    title: '角色名',
+    title: 'roleName',
     name: 'roleName',
     searchItem: {}
   },
   {
-    title: '顺序',
+    title: 'order',
     name: 'order',
     searchItem: {
       type: 'number',
@@ -32,12 +32,12 @@ export const columns1 = [
 
 export const columns2 = [
   {
-    title: '角色名',
+    title: 'roleName',
     name: 'roleName',
     searchItem: {}
   },
   {
-    title: '角色类型',
+    title: 'Role type',
     name: 'roleType',
     dict: [
       { code: '1', codeName: '111' },
@@ -49,7 +49,7 @@ export const columns2 = [
     }
   },
   {
-    title: '顺序',
+    title: 'order',
     name: 'order',
     searchItem: {
       type: 'number'
@@ -59,23 +59,23 @@ export const columns2 = [
 
 export const columns3 = [
   {
-    title: '选择时间',
+    title: 'selection period',
     name: 'date1',
     searchItem: {
       type: 'date'
     }
   },
   {
-    title: '选择时间',
+    title: 'selection period',
     name: 'date2',
     searchItem: {
       type: 'date~',
       width: 300,
-      placeholder: ['这是开始时间', '这是结束时间']
+      placeholder: ['This is the start time', 'This is the end time']
     }
   },
   {
-    title: '选择时间',
+    title: 'selection period',
     name: 'date3',
     searchItem: {
       type: 'month'
@@ -85,47 +85,47 @@ export const columns3 = [
 
 export const columns4 = [
   {
-    title: '条件1',
+    title: 'Condition1',
     name: 'key1',
     searchItem: {}
   },
   {
-    title: '条件2',
+    title: 'Condition2',
     name: 'key2',
     searchItem: {}
   },
   {
-    title: '条件3',
+    title: 'Condition3',
     name: 'key3',
     searchItem: {}
   },
   {
-    title: '条件4',
+    title: 'Condition4',
     name: 'key4',
     searchItem: {}
   },
   {
-    title: '条件5',
+    title: 'Condition5',
     name: 'key5',
     searchItem: {}
   },
   {
-    title: '条件6',
+    title: 'Condition6',
     name: 'key6',
     searchItem: {}
   },
   {
-    title: '条件7',
+    title: 'Condition7',
     name: 'key7',
     searchItem: {}
   },
   {
-    title: '条件8',
+    title: 'Condition8',
     name: 'key8',
     searchItem: {}
   },
   {
-    title: '条件9',
+    title: 'Condition 9',
     name: 'key9',
     searchItem: {}
   }
@@ -194,7 +194,7 @@ export const columns5 = [
 
 export const columns6 = [
   {
-    title: '带图标',
+    title: 'With icon',
     name: 'key',
     searchItem: {
       type: 'custom',
@@ -202,11 +202,11 @@ export const columns6 = [
         // ...
         const { getFieldDecorator } = form;
         return getFieldDecorator('userName', {
-          rules: [{ required: true, message: '请输入用户名!' }]
+          rules: [{ required: true, message: 'please enter user name!' }]
         })(
           <Input
             prefix={<Icon type="user" style={{ fontSize: 13 }} />}
-            placeholder="用户名"
+            placeholder="username"
           />
         );
       }

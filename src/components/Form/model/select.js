@@ -58,7 +58,7 @@ export default ({
   }
 
   const props = {
-    placeholder: placeholder || `请选择${otherProps.title}`,
+    placeholder: placeholder || `please choose ${otherProps.title}`,
     ...otherProps
   };
 

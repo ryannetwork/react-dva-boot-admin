@@ -14,7 +14,10 @@ export default class extends BaseComponent {
           <Panel title="说明">
             <h3>Column 语法</h3>
             <p>
-              通过配制Column可同时生成我们页面中的三大块元素、搜索条（高级搜索）组件、新增修改的表单组件、带分页的数据表格组件。
+              By configuring Column, you can generate three large blocks of
+              elements in our page, search bar (advanced search) component,
+              newly modified form component, and data table component with
+              paging. [Configuration instructions]
               <a
                 style={{ textDecoration: 'underline' }}
                 href="https://github.com/LANIF-UI/dva-boot-admin/blob/master/docs/columns.md"

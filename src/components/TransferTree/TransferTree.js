@@ -13,7 +13,7 @@ export default class TransferTree extends React.Component {
     prefixCls: 'antui-transfer-tree',
     dataSource: [],
     onChange: noop,
-    titleText: '源列表',
+    titleText: 'Source list',
     treeKey: 'key',
     treeTitleKey: 'title',
     showSearch: false,
@@ -39,7 +39,7 @@ export default class TransferTree extends React.Component {
     treeRender: PropTypes.func,
     loadData: PropTypes.func,
     loading: PropTypes.bool,
-    asyncSearch: PropTypes.func,
+    asyncSearch: PropTypes.func
   };
 
   constructor(props) {
@@ -80,7 +80,7 @@ export default class TransferTree extends React.Component {
         this.setState({
           targetNodes: targetNodes,
           selectedKeys: targetNodes.map(node => node[nextProps.treeKey])
-        })
+        });
       }
       if (dataSource) {
         this.setState({
@@ -160,7 +160,13 @@ export default class TransferTree extends React.Component {
       loading,
       asyncSearch
     } = this.props;
-    const { leftFilter, rightFilter, selectedKeys, targetNodes, dataSource } = this.state;
+    const {
+      leftFilter,
+      rightFilter,
+      selectedKeys,
+      targetNodes,
+      dataSource
+    } = this.state;
 
     const cls = classNames({
       [className]: !!className,

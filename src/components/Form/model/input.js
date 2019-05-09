@@ -59,7 +59,7 @@ export default ({
   const props = {
     autoComplete: 'off',
     type,
-    placeholder: placeholder || `请输入${otherProps.title}`,
+    placeholder: placeholder || `please enter ${otherProps.title}`,
     ...otherProps
   };
 

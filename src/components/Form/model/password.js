@@ -31,7 +31,7 @@ export default class PasswordForm extends Component {
   checkPassword = (rule, value, callback) => {
     const form = this.props.form;
     if (value && value !== form.getFieldValue(this.props.name)) {
-      callback('两次输入密码不一致!');
+      callback('The two passwords are inconsistent!');
     } else {
       callback();
     }
@@ -66,7 +66,7 @@ export default class PasswordForm extends Component {
     formFieldOptions.rules = [
       {
         required: true,
-        message: `请输入${otherProps.title}`
+        message: `please enter ${otherProps.title}`
       },
       {
         validator: this.checkConfirm
@@ -92,7 +92,7 @@ export default class PasswordForm extends Component {
             {getFieldDecorator(name, formFieldOptions)(
               <Input
                 type="password"
-                placeholder={placeholder || `请输入${otherProps.title}`}
+                placeholder={placeholder || `please enter ${otherProps.title}`}
               />
             )}
           </Form.Item>
@@ -101,7 +101,7 @@ export default class PasswordForm extends Component {
           <ComponentCol className="col-item col-item-repeat-password" {...col}>
             <Form.Item
               {...formItemLayout}
-              label={'确认' + otherProps.title}
+              label={'confirm' + otherProps.title}
               hasFeedback
               className="col-item-content"
             >
@@ -109,7 +109,7 @@ export default class PasswordForm extends Component {
                 rules: [
                   {
                     required: true,
-                    message: `请再次输入${otherProps.title}`
+                    message: `Please enter again${otherProps.title}`
                   },
                   {
                     validator: this.checkPassword
@@ -119,7 +119,7 @@ export default class PasswordForm extends Component {
                 <Input
                   type="password"
                   onBlur={this.handleConfirmBlur}
-                  placeholder="两次输入需保持一致"
+                  placeholder="Two inputs need to be consistent"
                 />
               )}
             </Form.Item>

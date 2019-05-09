@@ -127,7 +127,7 @@ class NavBar extends PureComponent {
               <input
                 type="text"
                 className="form-control"
-                placeholder="全文检索"
+                placeholder="Full Text Search"
                 onClick={this.onOpenSearchBox}
               />
             </div>
@@ -142,7 +142,7 @@ class NavBar extends PureComponent {
           <li className="dropdown">
             <Popover
               placement="bottomRight"
-              title={'通知'}
+              title={'Notice'}
               overlayClassName={cx('navbar-popup', { [theme]: !!theme })}
               content={''}
               trigger="click"
@@ -180,29 +180,29 @@ const UserDropDown = props => (
   <ul className="dropdown-menu list-group dropdown-persist">
     <li className="list-group-item">
       <a className="animated animated-short fadeInUp">
-        <Icon type="mail" /> 信息
+        <Icon type="mail" /> mail
         <Badge count={5} className="label" />
       </a>
     </li>
     <li className="list-group-item">
       <a className="animated animated-short fadeInUp">
-        <Icon type="users" /> 好友
+        <Icon type="users" /> Friend
         <Badge count={6} className="label" />
       </a>
     </li>
     <li className="list-group-item">
       <a className="animated animated-short fadeInUp">
-        <Icon type="gear" /> 帐户设置
+        <Icon type="gear" /> gear
       </a>
     </li>
     <li className="list-group-item">
       <a className="animated animated-short fadeInUp">
-        <Icon type="ring" /> 通知
+        <Icon type="ring" /> ring
       </a>
     </li>
     <li className="list-group-item dropdown-footer">
       <Link to="/sign/login">
-        <Icon type="poweroff" /> 退出
+        <Icon type="poweroff" /> Log out
       </Link>
     </li>
   </ul>

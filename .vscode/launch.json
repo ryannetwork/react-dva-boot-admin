@@ -4,7 +4,7 @@
     {
       "type": "chrome",
       "request": "launch",
-      "name": "启动 Chrome 并打开 localhost",
+      "name": " Chrome  localhost",
       "url": "http://localhost:3000",
       "webRoot": "${workspaceFolder}"
     }

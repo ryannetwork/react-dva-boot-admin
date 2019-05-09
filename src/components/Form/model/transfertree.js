@@ -102,13 +102,13 @@ class TransferTreeControlled extends Component {
           </div>
           <Modal
             className="antui-transfer-modal"
-            title={'请选择' + otherProps.title}
+            title={'please choose' + otherProps.title}
             visible={this.state && this.state.visible}
             width={modal.width || 480}
             onOk={this.hideModal}
             onCancel={this.hideModal}
-            okText="确定"
-            cancelText="取消"
+            okText="OK"
+            cancelText="Cancel"
             {...modal}
           >
             {comp}
@@ -166,7 +166,7 @@ export default ({
   }
 
   const props = {
-    placeholder: placeholder || `请选择${otherProps.title}`,
+    placeholder: placeholder || `please choose ${otherProps.title}`,
     ...otherProps
   };
 
