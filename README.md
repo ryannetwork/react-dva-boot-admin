@@ -1,4 +1,4 @@
-[English](./README_en-US.md) | 简体中文
+English | [简体中文](./README.md)
 
 <p align="center">
     <img alt="dva-boot-admin" src="https://user-images.githubusercontent.com/1697158/49214902-8f888180-f402-11e8-8207-84d5cdf9d9bf.png" width="140">
@@ -11,111 +11,107 @@
   <img src="https://img.shields.io/badge/developing%20with-DVA%20BOOT%20ADMIN-2077ff.svg">
 </p>
 
-Based on the most mature technology system of the React ecosystem, an out-of-the-box back-end management system is built. The framework contains some unique custom components, as well as many third-party components that have been well-received and well-known. It is a simple dashboard display interface, and it is all the tools necessary to ensure your next web project. We hope that people who use it can quickly and stably develop robust, beautiful and easy-to-use web applications.
+Based on the most mature technology system of the React ecosystem, an out-of-the-box back-end management system is built. The framework contains some unique custom components, as well as many third-party components that have been well-received and well-known. We hope that people who use it can quickly and stably develop robust, beautiful and easy-to-use web applications.
 
-[GitHub 主页](https://github.com/LANIF-UI/dva-boot-admin) |
-[码云主页](https://gitee.com/wiqi/dva-boot-admin)
+
+[GitHub](https://github.com/LANIF-UI/dva-boot-admin) |
+[Gitee](https://gitee.com/wiqi/dva-boot-admin)
 
 ![](https://ucarecdn.com/b296e689-19fd-46f5-863e-40c0d4ba7a61/1.jpg)
 
-## 目录
-
-- [功能](#feature)
-- [工程结构](#structure)
-- [开发](#usage)
-- [文档](https://github.com/LANIF-UI/dva-boot-admin/blob/master/docs/index.md)
-  - [如何开始](https://github.com/LANIF-UI/dva-boot-admin/blob/master/docs/start.md)
-  - [全局配置](https://github.com/LANIF-UI/dva-boot-admin/blob/master/docs/config.md)
-  - [modelEnhance 用法](https://github.com/LANIF-UI/dva-boot-admin/blob/master/docs/modelEnhance.md)
-  - [pageHelper 用法](https://github.com/LANIF-UI/dva-boot-admin/blob/master/docs/pageHelper.md)
-  - [组件](https://github.com/LANIF-UI/dva-boot-admin/blob/master/docs/components.md)
-  - [接口数据模拟](https://github.com/LANIF-UI/dva-boot-admin/blob/master/docs/mock.md)
-  - [打包](https://github.com/LANIF-UI/dva-boot-admin/blob/master/docs/build.md)
+## Table of Contents
+* [Feature](#feature)
+* [Project Structure](#structure)
+* [Usage](#usage)
+* [Document](https://github.com/LANIF-UI/dva-boot-admin/blob/master/docs/index.md)
+  - [Get Start](https://github.com/LANIF-UI/dva-boot-admin/blob/master/docs/start.md)
+  - [Configuration](https://github.com/LANIF-UI/dva-boot-admin/blob/master/docs/config.md)
+  - [Use ModelEnhance](https://github.com/LANIF-UI/dva-boot-admin/blob/master/docs/modelEnhance.md)
+  - [Use PageHelper](https://github.com/LANIF-UI/dva-boot-admin/blob/master/docs/pageHelper.md)
+  - [Components](https://github.com/LANIF-UI/dva-boot-admin/blob/master/docs/components.md)
+  - [API Mock](https://github.com/LANIF-UI/dva-boot-admin/blob/master/docs/mock.md)
+  - [Building for Production](https://github.com/LANIF-UI/dva-boot-admin/blob/master/docs/build.md)
   - [FAQs](https://github.com/LANIF-UI/dva-boot-admin/blob/master/docs/faqs.md)
-- [截图](#gallery)
-- [更新日志](https://github.com/LANIF-UI/dva-boot-admin/blob/master/CHANGELOG.md)
-- [结尾](#end)
+* [Gallery](#gallery)
+* [CHANGELOG](https://github.com/LANIF-UI/dva-boot-admin/blob/master/CHANGELOG.md)
+* [End](#end)
 
-## 功能
+## Feature
+- **Encapsulate the data flow of the dva framework**,Simple requests can be defined without being defined in model and service.
+- **Encapsulated api mock**,Can develop front-end functions independently of the background.
+- **Encapsulated paging request**,Simplify and standardize paging logic.
+- **Encapsulated fetch**,The best fetch tools.
+- **Routing on demand loading**,First screen loading super fast.
+- **Wrapped antd component**,Expanded many useful widgets.
+- **Fractal project structure**,No need to distract other modules during development, to achieve minimum coupling.
+- Build**2.09 MB**after gzip,less than **1 MB** general.
+- Base on [dva-boot](https://github.com/LANIF-UI/dva-boot)
+- Global exception handling, global request interception
+- **Code autoconfiguration tool**[dva-boot-desktop](https://github.com/LANIF-UI/dva-boot-desktop)，coming soon:tada:
 
-- **封装了 dva 框架的数据流转**，简单的请求可以不用在 model 和 service 中定义
-- **封装了数据模拟**，可以独立于后台开发前台功能
-- **封装了分页请求**，简化并规范了分页逻辑
-- **封装了 fetch 请求**，适应与后台多种交互请求, body 参数 parameter 参数 path 参数，动态请求头，请求前后拦截
-- **路由按需加载**，首屏加载超快
-- **扩展了 antd 写了许多实用的 UI**，通过一个配置即可生成，后台 CRUD 三件套(数据表格，搜索框，新增编辑表单)
-- **按业务模块划分的目录结构**，开发独力功能时无需分心其它模块，做到最小耦合
-- 生产环境下打包，gzip 后只有**2.09 MB**，只使用常用模块后不到**1 MB**
-- 一些常用的小部件用法
-- 许多精心设计的页面及交互场景
-- [dva-boot](https://github.com/LANIF-UI/dva-boot)脚手架封装的功能
-- 全局异常处理，全局请求拦截，**公共配置提取**
-- **代码自动配置工具**[dva-boot-desktop](https://github.com/LANIF-UI/dva-boot-desktop)，即将到来:tada:
-
-## 工程结构
-
+## Structure
 ```
 .
-├── public                   # 不参与编译的资源文件
-├── templates                # 为代码生成所准备的模板文件
-├── src                      # 主程序目录
-│   ├── index.js             # 程序启动和渲染入口文件
-│   ├── config.js            # 全局配置
-│   ├── components           # 全局公共组件
-│   ├── layouts              # 页面结构组件
-│   │   ├── BasicLayout      # 基本布局
-│   │   └── OtherLayout      # 布局组件根据具体功能调整，在路由配置中引用
-│   ├── routes               # 动态路由目录（每个功能一个文件夹的MVC结构）
-│   │   ├── index.js         # 路由配置文件
-│   │   ├── Home             # 功能模块
-│   │   │   ├── index.js     # 路由配置文件
-│   │   │   ├── assets       # 单独属于这个模块的静态资源文件
-│   │   │   ├── components   # 页面组件
+├── public                   # Static public assets (not imported anywhere in source code)
+├── templates                # Template file prepared for code generation
+├── src                      # Application source code
+│   ├── index.js             # Main HTML page container for app
+│   ├── config.js            # Global configuration
+│   ├── components           # Global Reusable Components
+│   ├── layouts              # Components that dictate major page structure
+│   │   ├── BasicLayout      # Basic page structure,configured in the route
+│   │   └── OtherLayout      # Other layout,
+│   ├── routes               # Main route definitions and async split points
+│   │   ├── index.js         # Main Route configured and async split points
+│   │   ├── Home             # Fractal route
+│   │   │   ├── index.js     # Route definitions and async split points
+│   │   │   ├── assets       # Assets required to render components
+│   │   │   ├── components   # Presentational React Components
 │   │   │   ├── model        # dva model
 │   │   │   ├── service      # dva service
-│   │   │   └── routes **    # 子路由(目录结构与父级相同)
-│   │   └── Login            # 功能模块
-│   │       ├── index.js     # 路由配置文件
-│   │       ├── assets       # 单独属于这个模块的静态资源文件
-│   │       ├── components   # 页面组件
+│   │   │   └── routes **    # Fractal sub-routes (** optional)
+│   │   └── Login            # Fractal route
+│   │       ├── index.js     # Route definitions and async split points
+│   │       ├── assets       # Assets required to render components
+│   │       ├── components   # Presentational React Components
 │   │       ├── model        # dva model
 │   │       ├── service      # dva service
-│   │       └── routes **    # 子路由(目录结构与父级相同)
-│   ├── utils                # 工具类
-│   └── assets               # 资源文件
-│           ├── fonts        # 字体 & 字体图标
-│           ├── images       # 图片
-│           └── styles       # 全局样式
+│   │       └── routes **    # Fractal sub-routes (** optional)
+│   ├── utils                # Tools 
+│   └── assets               # Global assets 
+│           ├── fonts        # Fonts & Icons
+│           ├── images       # Common Images
+│           └── styles       # Global styles
 ```
 
-## 使用方法
+## Usage
 
-```javascript
+``` javascript
 $ git clone https://github.com/LANIF-UI/dva-boot-admin.git
 $ cd dva-boot-admin
-// 安装依赖
+// Installation
 $ yarn
-// 启动
+// Serves your app and open localhost:3000
 $ yarn start
-// 打包
+// Builds the application
 $ yarn build
-// 打包带图形化分析
+// Builds the application of graphical analysis
 $ yarn build --analyze
 ```
 
-## 兼容性
+## Compatibility
 
 | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/edge/edge_48x48.png" alt="IE / Edge" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)</br>IE / Edge | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/firefox/firefox_48x48.png" alt="Firefox" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)</br>Firefox | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/chrome/chrome_48x48.png" alt="Chrome" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)</br>Chrome | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/safari/safari_48x48.png" alt="Safari" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)</br>Safari | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/opera/opera_48x48.png" alt="Opera" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)</br>Opera |
-| --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| >= IE10                                                                                                                                                                                                         | last 2 versions                                                                                                                                                                                                   | last 2 versions                                                                                                                                                                                               | last 2 versions                                                                                                                                                                                               | last 2 versions                                                                                                                                                                                           |
+| --------- | --------- | --------- | --------- | --------- | 
+| >= IE10 | last 2 versions | last 2 versions | last 2 versions | last 2 versions
 
-## 结尾
+## End
 
-欢迎大家提问题，感谢大家的 PR，如果觉得不错，还请帮忙加个:star:哦
+Welcome everyone to ask questions and PR
 
-企鹅群 820881369 :penguin:
+Group QQ 820881369 :penguin:
 
-# 截图
+# Gallery
 
 ![](https://ucarecdn.com/7602439b-fa79-4a57-a2f1-c4448710c1c2/14.jpg)
 ![](https://ucarecdn.com/4de73808-81bf-4fe9-a6a7-fb21000f0e56/banner.gif)
