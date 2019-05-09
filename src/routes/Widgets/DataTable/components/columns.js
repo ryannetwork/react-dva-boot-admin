@@ -6,30 +6,30 @@ const Tip = DataTable.Tip;
 
 export const columns1 = [
   {
-    title: '名称',
+    title: 'name',
     name: 'name',
     tableItem: {}
   },
   {
-    title: '年龄',
+    title: 'age',
     name: 'age',
     tableItem: {}
   },
   {
-    title: '地址',
+    title: 'address',
     name: 'address',
     tableItem: {}
   },
   {
-    title: '操作',
+    title: 'operating',
     tableItem: {
       width: 180,
       render: (text, record) => (
         <DataTable.Oper>
-          <Button tooltip="修改">
+          <Button tooltip="edit">
             <Icon type="edit" />
           </Button>
-          <Button tooltip="删除">
+          <Button tooltip="trash">
             <Icon type="trash" />
           </Button>
         </DataTable.Oper>
@@ -40,17 +40,17 @@ export const columns1 = [
 
 export const columns2 = [
   {
-    title: '名称',
+    title: 'name',
     name: 'name',
     tableItem: {}
   },
   {
-    title: '年龄',
+    title: 'age',
     name: 'age',
     tableItem: {}
   },
   {
-    title: '地址',
+    title: 'address',
     name: 'address',
     tableItem: {
       width: 200,
@@ -61,12 +61,12 @@ export const columns2 = [
 
 export const columns3 = [
   {
-    title: '角色',
+    title: 'role',
     name: 'role',
     dict: [
-      { code: '1', codeName: '管理员' },
-      { code: '2', codeName: '游客' },
-      { code: '3', codeName: '作者' }
+      { code: '1', codeName: 'administrator' },
+      { code: '2', codeName: 'Tourist' },
+      { code: '3', codeName: 'Author' }
     ],
     tableItem: {}
   }
@@ -74,19 +74,19 @@ export const columns3 = [
 
 export const columns4 = [
   {
-    title: '名称',
+    title: 'name',
     name: 'name',
     tableItem: {}
   },
   {
-    title: '年龄',
+    title: 'age',
     name: 'age',
     tableItem: {
       sorter: true
     }
   },
   {
-    title: '地址',
+    title: 'address',
     name: 'address',
     tableItem: {}
   }
@@ -94,16 +94,16 @@ export const columns4 = [
 
 export const columns5 = (self, editingKey) => [
   {
-    title: '名称',
+    title: 'name',
     name: 'name',
     tableItem: {
       type: 'input',
       editing: (text, record) => record.id === editingKey,
-      rules: [{ required: true, message: '请输入名称！' }]
+      rules: [{ required: true, message: 'Please enter a name!' }]
     }
   },
   {
-    title: '年龄',
+    title: 'age',
     name: 'age',
     tableItem: {
       type: 'number',
@@ -111,12 +111,12 @@ export const columns5 = (self, editingKey) => [
     }
   },
   {
-    title: '角色',
+    title: 'role',
     name: 'role',
     dict: [
-      { code: '1', codeName: '员工' },
-      { code: '2', codeName: '经理' },
-      { code: '3', codeName: '老总' }
+      { code: '1', codeName: 'Staff' },
+      { code: '2', codeName: 'manager' },
+      { code: '3', codeName: 'CEO' }
     ],
     tableItem: {
       type: 'select',
@@ -124,7 +124,7 @@ export const columns5 = (self, editingKey) => [
     }
   },
   {
-    title: '操作',
+    title: 'operating',
     tableItem: {
       width: 180,
       render: (text, record) => (
@@ -132,11 +132,11 @@ export const columns5 = (self, editingKey) => [
           {form =>
             record.id === editingKey ? (
               <Fragment>
-                <a onClick={e => self.onSave(record, form)}>保存</a>
-                <a onClick={e => self.onCancelEdit()}>取消</a>
+                <a onClick={e => self.onSave(record, form)}>Save</a>
+                <a onClick={e => self.onCancelEdit()}>cancel</a>
               </Fragment>
             ) : (
-              <a onClick={e => self.onEdit(record)}>修改</a>
+              <a onClick={e => self.onEdit(record)}>Edit</a>
             )
           }
         </EditableOper>

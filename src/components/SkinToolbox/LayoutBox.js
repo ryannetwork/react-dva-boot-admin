@@ -8,19 +8,19 @@ const CheckGroup = Checkbox.Group;
 export default ({ theme, onChange }) => (
   <CheckGroup onChange={onChange} value={theme.layout}>
     <Checkbox className="fixedHeader" value="fixedHeader">
-      固定头部
+      Fixed head
     </Checkbox>
     <Checkbox className="fixedSidebar" value="fixedSidebar">
-      固定边栏
+      Fixed sidebar
     </Checkbox>
     <Checkbox className="tabLayout" value="tabLayout">
-      标签模式
+      Label mode
     </Checkbox>
     <Checkbox className="fixedBreadcrumbs" value="fixedBreadcrumbs">
-      固定面包屑
+      Fixed breadcrumbs
     </Checkbox>
     <Checkbox className="hidedBreadcrumbs" value="hidedBreadcrumbs">
-      隐藏面包屑
+      Hide breadcrumbs
     </Checkbox>
   </CheckGroup>
 );

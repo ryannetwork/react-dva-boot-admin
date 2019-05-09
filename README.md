@@ -11,40 +11,41 @@
   <img src="https://img.shields.io/badge/developing%20with-DVA%20BOOT%20ADMIN-2077ff.svg">
 </p>
 
-基于React生态系统的最成熟的技术体系，搭建的一套开箱即用的后台管理系统，框架里包含了一些独有的定制组件，以及许多经过大量实践口碑良好的第三方组件，它不仅仅是一个简单的仪表盘展示界面，更是保证您下一个web项目所必需的所有工具，我们希望使用它的人可以快速、稳定的开发出健壮、美观、易用的web程序。
+Based on the most mature technology system of the React ecosystem, an out-of-the-box back-end management system is built. The framework contains some unique custom components, as well as many third-party components that have been well-received and well-known. It is a simple dashboard display interface, and it is all the tools necessary to ensure your next web project. We hope that people who use it can quickly and stably develop robust, beautiful and easy-to-use web applications.
 
-
-[GitHub主页](https://github.com/LANIF-UI/dva-boot-admin) |
+[GitHub 主页](https://github.com/LANIF-UI/dva-boot-admin) |
 [码云主页](https://gitee.com/wiqi/dva-boot-admin)
 
 ![](https://ucarecdn.com/b296e689-19fd-46f5-863e-40c0d4ba7a61/1.jpg)
 
 ## 目录
-* [功能](#feature)
-* [工程结构](#structure)
-* [开发](#usage)
-* [文档](https://github.com/LANIF-UI/dva-boot-admin/blob/master/docs/index.md)
+
+- [功能](#feature)
+- [工程结构](#structure)
+- [开发](#usage)
+- [文档](https://github.com/LANIF-UI/dva-boot-admin/blob/master/docs/index.md)
   - [如何开始](https://github.com/LANIF-UI/dva-boot-admin/blob/master/docs/start.md)
   - [全局配置](https://github.com/LANIF-UI/dva-boot-admin/blob/master/docs/config.md)
-  - [modelEnhance用法](https://github.com/LANIF-UI/dva-boot-admin/blob/master/docs/modelEnhance.md)
-  - [pageHelper用法](https://github.com/LANIF-UI/dva-boot-admin/blob/master/docs/pageHelper.md)
+  - [modelEnhance 用法](https://github.com/LANIF-UI/dva-boot-admin/blob/master/docs/modelEnhance.md)
+  - [pageHelper 用法](https://github.com/LANIF-UI/dva-boot-admin/blob/master/docs/pageHelper.md)
   - [组件](https://github.com/LANIF-UI/dva-boot-admin/blob/master/docs/components.md)
   - [接口数据模拟](https://github.com/LANIF-UI/dva-boot-admin/blob/master/docs/mock.md)
   - [打包](https://github.com/LANIF-UI/dva-boot-admin/blob/master/docs/build.md)
   - [FAQs](https://github.com/LANIF-UI/dva-boot-admin/blob/master/docs/faqs.md)
-* [截图](#gallery)
-* [更新日志](https://github.com/LANIF-UI/dva-boot-admin/blob/master/CHANGELOG.md)
-* [结尾](#end)
+- [截图](#gallery)
+- [更新日志](https://github.com/LANIF-UI/dva-boot-admin/blob/master/CHANGELOG.md)
+- [结尾](#end)
 
 ## 功能
-- **封装了dva框架的数据流转**，简单的请求可以不用在model和service中定义
+
+- **封装了 dva 框架的数据流转**，简单的请求可以不用在 model 和 service 中定义
 - **封装了数据模拟**，可以独立于后台开发前台功能
 - **封装了分页请求**，简化并规范了分页逻辑
-- **封装了fetch请求**，适应与后台多种交互请求, body参数 parameter参数 path参数，动态请求头，请求前后拦截
+- **封装了 fetch 请求**，适应与后台多种交互请求, body 参数 parameter 参数 path 参数，动态请求头，请求前后拦截
 - **路由按需加载**，首屏加载超快
-- **扩展了antd写了许多实用的UI**，通过一个配置即可生成，后台CRUD三件套(数据表格，搜索框，新增编辑表单)
+- **扩展了 antd 写了许多实用的 UI**，通过一个配置即可生成，后台 CRUD 三件套(数据表格，搜索框，新增编辑表单)
 - **按业务模块划分的目录结构**，开发独力功能时无需分心其它模块，做到最小耦合
-- 生产环境下打包，gzip后只有**2.09 MB**，只使用常用模块后不到**1 MB**
+- 生产环境下打包，gzip 后只有**2.09 MB**，只使用常用模块后不到**1 MB**
 - 一些常用的小部件用法
 - 许多精心设计的页面及交互场景
 - [dva-boot](https://github.com/LANIF-UI/dva-boot)脚手架封装的功能
@@ -52,6 +53,7 @@
 - **代码自动配置工具**[dva-boot-desktop](https://github.com/LANIF-UI/dva-boot-desktop)，即将到来:tada:
 
 ## 工程结构
+
 ```
 .
 ├── public                   # 不参与编译的资源文件
@@ -88,7 +90,7 @@
 
 ## 使用方法
 
-``` javascript
+```javascript
 $ git clone https://github.com/LANIF-UI/dva-boot-admin.git
 $ cd dva-boot-admin
 // 安装依赖
@@ -104,12 +106,12 @@ $ yarn build --analyze
 ## 兼容性
 
 | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/edge/edge_48x48.png" alt="IE / Edge" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)</br>IE / Edge | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/firefox/firefox_48x48.png" alt="Firefox" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)</br>Firefox | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/chrome/chrome_48x48.png" alt="Chrome" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)</br>Chrome | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/safari/safari_48x48.png" alt="Safari" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)</br>Safari | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/opera/opera_48x48.png" alt="Opera" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)</br>Opera |
-| --------- | --------- | --------- | --------- | --------- | 
-| >= IE10 | last 2 versions | last 2 versions | last 2 versions | last 2 versions
+| --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| >= IE10                                                                                                                                                                                                         | last 2 versions                                                                                                                                                                                                   | last 2 versions                                                                                                                                                                                               | last 2 versions                                                                                                                                                                                               | last 2 versions                                                                                                                                                                                           |
 
 ## 结尾
 
-欢迎大家提问题，感谢大家的PR，如果觉得不错，还请帮忙加个:star:哦
+欢迎大家提问题，感谢大家的 PR，如果觉得不错，还请帮忙加个:star:哦
 
 企鹅群 820881369 :penguin:
 

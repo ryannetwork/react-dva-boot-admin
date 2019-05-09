@@ -12,13 +12,13 @@ export default class extends BaseComponent {
     activeKey: 'Line',
     chartTypes: [
       {
-        title: '折线图 / Line',
+        title: 'Line',
         icon: 'line-chart',
         key: 'Line',
         components: ['./Line']
       },
       {
-        title: '柱状图 / Bar',
+        title: 'Bar',
         icon: 'bar-chart',
         key: 'Bar',
         components: ['./Bar']
@@ -35,15 +35,20 @@ export default class extends BaseComponent {
         key: 'Scatter',
         components: ['./Scatter']
       },
-      { title: '地图 / Map', icon: 'global', key: 'Map', components: ['./Map'] },
       {
-        title: '雷达图 / Radar',
+        title: 'Map',
+        icon: 'global',
+        key: 'Map',
+        components: ['./Map']
+      },
+      {
+        title: 'Radar chart/ Radar',
         icon: 'trademark',
         key: 'Radar',
         components: ['./Radar']
       },
       {
-        title: '仪表盘 / Gauge',
+        title: 'Dashboard / Gauge',
         icon: 'dashboard',
         key: 'Gauge',
         components: ['./Gauge']
@@ -78,7 +83,7 @@ export default class extends BaseComponent {
     return (
       <SideLayout
         title="G2/BizCharts 图表"
-        author="蚂蚁金服"
+        author="Ant gold clothing"
         site="https://alibaba.github.io/BizCharts/"
         sideContent={sideContent}
       >
@@ -89,7 +94,8 @@ export default class extends BaseComponent {
               key={index}
               title={
                 <div>
-                  <Icon type={active.icon} antd />&nbsp;
+                  <Icon type={active.icon} antd />
+                  &nbsp;
                   {active.title}
                 </div>
               }

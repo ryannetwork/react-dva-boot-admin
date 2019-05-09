@@ -59,7 +59,7 @@ class TopBar extends Component {
               >
                 <a className="metro-tile">
                   <Icon type="message" />
-                  <span className="metro-title">信息</span>
+                  <span className="metro-title">information</span>
                 </a>
               </CSSAnimate>
             </Col>
@@ -70,7 +70,7 @@ class TopBar extends Component {
               >
                 <a className="metro-tile">
                   <Icon type="user" />
-                  <span className="metro-title">用户</span>
+                  <span className="metro-title">user</span>
                 </a>
               </CSSAnimate>
             </Col>
@@ -81,7 +81,7 @@ class TopBar extends Component {
               >
                 <a className="metro-tile">
                   <Icon type="headphones" />
-                  <span className="metro-title">支持</span>
+                  <span className="metro-title">stand by</span>
                 </a>
               </CSSAnimate>
             </Col>
@@ -92,7 +92,7 @@ class TopBar extends Component {
               >
                 <a className="metro-tile">
                   <Icon type="equalizer" />
-                  <span className="metro-title">设置</span>
+                  <span className="metro-title">Setting</span>
                 </a>
               </CSSAnimate>
             </Col>
@@ -103,7 +103,7 @@ class TopBar extends Component {
               >
                 <a className="metro-tile">
                   <Icon type="play" />
-                  <span className="metro-title">视频</span>
+                  <span className="metro-title">video</span>
                 </a>
               </CSSAnimate>
             </Col>
@@ -114,7 +114,7 @@ class TopBar extends Component {
               >
                 <a className="metro-tile">
                   <Icon type="image" />
-                  <span className="metro-title">图片</span>
+                  <span className="metro-title">image</span>
                 </a>
               </CSSAnimate>
             </Col>
@@ -130,7 +130,7 @@ class TopBar extends Component {
                 <Icon type="home" />
               </Breadcrumb.Item>
               <Breadcrumb.Item>
-                <Link to="/">主页</Link>
+                <Link to="/">Homepage</Link>
               </Breadcrumb.Item>
               {currentRoute.map((item, index) => (
                 <Breadcrumb.Item key={index}>

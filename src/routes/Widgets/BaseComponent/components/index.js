@@ -11,18 +11,33 @@ export default class extends BaseComponent {
     return (
       <Layout className="full-layout page base-component-page">
         <Content>
-          <Panel title="说明">
+          <Panel title="Description">
             <h2>BaseComponent</h2>
-            <p>所有路由页面都可以使用的基类，可以提取公共方法放到此类中，如基本的CRUD方法，路由跳转，基本弹窗等</p>
+            <p>
+              {' '}
+              base class that can be used by all routing pages. You can extract
+              public methods into such classes, such as basic CRUD methods,
+              route jumps, basic popups, etc.
+            </p>
             <h3>Notice</h3>
             <Button.Group>
-              <Button onClick={_ => this.notice.success('I‘m Hero')}>成功</Button> 
-              <Button onClick={_ => this.notice.error('I‘m Hero')}>失败</Button> 
-              <Button onClick={_ => this.notice.warning('I‘m Hero')}>注意</Button> 
-              <Button onClick={_ => this.notice.info('I‘m Hero')}>通知</Button> 
+              <Button onClick={_ => this.notice.success('I‘m Hero')}>
+                success
+              </Button>
+              <Button onClick={_ => this.notice.error('I‘m Hero')}>
+                failure
+              </Button>
+              <Button onClick={_ => this.notice.warning('I‘m Hero')}>
+                note
+              </Button>
+              <Button onClick={_ => this.notice.info('I‘m Hero')}>
+                Notice
+              </Button>
             </Button.Group>
             <h3>Router</h3>
-            <Button onClick={_ => this.history.push('/')}>回到首页</Button>
+            <Button onClick={_ => this.history.push('/')}>
+              back to the homepage
+            </Button>
           </Panel>
         </Content>
       </Layout>

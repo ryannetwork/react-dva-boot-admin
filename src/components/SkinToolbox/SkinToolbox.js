@@ -6,7 +6,7 @@ import { Tabs } from 'antd';
 import $$ from 'cmn-utils';
 import SideBarBox from './SideBarBox';
 import NavBarBox from './NavBarBox';
-import LayoutBox from "./LayoutBox";
+import LayoutBox from './LayoutBox';
 const TabPane = Tabs.TabPane;
 
 /**
@@ -14,8 +14,8 @@ const TabPane = Tabs.TabPane;
  */
 class SkinToolbox extends Component {
   state = {
-    collapsed: true,
-  }
+    collapsed: true
+  };
 
   onChangeSideColor = e => {
     this.props.onChangeTheme({
@@ -36,11 +36,11 @@ class SkinToolbox extends Component {
       ...this.props.theme,
       layout: value
     });
-  }
+  };
 
   clearThemeStore = _ => {
     $$.removeStore('theme');
-  }
+  };
 
   /**
    * 切换皮肤设置面板
@@ -65,26 +65,28 @@ class SkinToolbox extends Component {
             <span className="panel-icon">
               <Icon type="gear" />
             </span>
-            <span className="panel-title">设置您的主题</span>
+            <span className="panel-title">Set your theme</span>
           </div>
           <div className="panel-body">
             <Tabs defaultActiveKey="1" size="small">
-              <TabPane tab="导航条" key="navbar">
-                <h4>导航条样式</h4>
+              <TabPane tab="Navigation bar" key="navbar">
+                <h4>Navigation bar style</h4>
                 <NavBarBox theme={theme} onChange={this.onChangeNavBarColor} />
               </TabPane>
-              <TabPane tab="边栏" key="sidebar">
-                <h4>边栏样式</h4>
+              <TabPane tab="Sidebar" key="sidebar">
+                <h4>Sidebar style</h4>
                 <SideBarBox theme={theme} onChange={this.onChangeSideColor} />
               </TabPane>
               <TabPane tab="布局" key="misc">
-                <h4>布局样式</h4>
+                <h4>Layout style</h4>
                 <LayoutBox theme={theme} onChange={this.onChangeLayout} />
               </TabPane>
             </Tabs>
           </div>
           <div className="panel-footer">
-            <a className="btn-primary" onClick={this.clearThemeStore}>清理存储</a>
+            <a className="btn-primary" onClick={this.clearThemeStore}>
+              Clean up storage
+            </a>
           </div>
         </div>
       </div>

@@ -9,77 +9,103 @@ const CheckboxGroup = Checkbox.Group;
 class Report extends Component {
   render() {
     const plainOptions = [
-      {value: '1066001', label: '开发实施'},
-      {value: '1066002', label: '测试'},
-      {value: '1066003', label: '试运行'},
+      { value: '1066001', label: 'Development and implementation' },
+      { value: '1066002', label: 'test' },
+      { value: '1066003', label: 'Test run' }
     ];
     return (
       <div className="system-audit-pring">
         <table className="tg">
           <tbody>
-          <tr>
-            <th className="tg-wp8o" colSpan="5">
-              <h1>XX部署/实施会签单</h1>
-              <h3 className="version">版本号：20181121</h3>
-            </th>
-          </tr>
-          <tr>
-            <td className="tg-obcv left1" rowSpan="5">申请人填写项</td>
-            <td className="tg-obcv left2 hfixed">系统名称</td>
-            <td className="tg-73oq" colSpan="3"></td>
-          </tr>
-          <tr>
-            <td className="tg-obcv left2 hfixed">系统状态</td>
-            <td className="tg-73oq" colSpan="3">
-              <CheckboxGroup options={plainOptions} />
-            </td>
-          </tr>
-          <tr>
-            <td className="tg-obcv left2 hfixed">负责系统业务部门</td>
-            <td className="tg-73oq" colSpan="3"></td>
-          </tr>
-          <tr>
-            <td className="tg-obcv left2">系统说明</td>
-            <td className="tg-73oq xtsm-content" colSpan="3">
-              <i>（简要说明系统基本情况：主要功能、部署方式、硬件架构、软件架构等。如：所需服务器类型、数量、配置；应用数据库种类及版本等。）</i>
-              <p></p>
-            </td>
-          </tr>
-          <tr>
-            <td className="tg-73oq h20" colSpan="2">
-              <div className="w50">
-                申请单位： 
-                <div className="sign">负责人签字：<br />(加盖公章)</div>
-                <div className="date">&nbsp;年&emsp;月&emsp;日</div>
-              </div>
-            </td>
-            <td className="tg-73oq" colSpan="2">
-              <div className="w50">
-                实施单位： 
-                <div className="sign">负责人签字：<br />(加盖公章)</div>
-                <div className="date">&nbsp;年&emsp;月&emsp;日</div>
-              </div>
-            </td>
-          </tr>
-          <tr>
-            <td className="tg-qtf5 left1">审批项</td>
-            <td className="tg-73oq h20" colSpan="2">
-              <div className="w50">
-                业务部门意见：
-                <p></p>
-                <div className="sign">负责人签字：<br />(加盖公章)</div>
-                <div className="date">&nbsp;年&emsp;月&emsp;日</div>
-              </div>
-            </td>
-            <td className="tg-73oq" colSpan="2">
-              <div className="w50">
-                科技信息部意见：
-                <p></p>
-                <div className="sign">负责人签字：<br />(加盖公章)</div>
-                <div className="date">&nbsp;年&emsp;月&emsp;日</div>
-              </div>
-            </td>
-          </tr>
+            <tr>
+              <th className="tg-wp8o" colSpan="5">
+                <h1>XX deployment /Implementation of the signing</h1>
+                <h3 className="version">Version number: 20181121</h3>
+              </th>
+            </tr>
+            <tr>
+              <td className="tg-obcv left1" rowSpan="5">
+                Applicant fill in
+              </td>
+              <td className="tg-obcv left2 hfixed">system name</td>
+              <td className="tg-73oq" colSpan="3" />
+            </tr>
+            <tr>
+              <td className="tg-obcv left2 hfixed">system status</td>
+              <td className="tg-73oq" colSpan="3">
+                <CheckboxGroup options={plainOptions} />
+              </td>
+            </tr>
+            <tr>
+              <td className="tg-obcv left2 hfixed">
+                Responsible for the system business unit
+              </td>
+              <td className="tg-73oq" colSpan="3" />
+            </tr>
+            <tr>
+              <td className="tg-obcv left2">systems Manual</td>
+              <td className="tg-73oq xtsm-content" colSpan="3">
+                <i>
+                  (A brief description of the basic situation of the system:
+                  main functions, deployment methods, hardware architecture,
+                  software architecture, etc., such as: required server type,
+                  quantity, configuration; application database types and
+                  versions, etc.){' '}
+                </i>
+                <p />
+              </td>
+            </tr>
+            <tr>
+              <td className="tg-73oq h20" colSpan="2">
+                <div className="w50">
+                  Application unit:
+                  <div className="sign">
+                    Signature of the person in charge:
+                    <br />
+                    (Stamp)
+                  </div>
+                  <div className="date">&nbsp;year&emsp;month&emsp;day</div>
+                </div>
+              </td>
+              <td className="tg-73oq" colSpan="2">
+                <div className="w50">
+                  Implementation unit:
+                  <div className="sign">
+                    Implementation unit:
+                    <br />
+                    (Stamp)
+                  </div>
+                  <div className="date">&nbsp;year&emsp;month&emsp;day</div>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td className="tg-qtf5 left1">Approval item</td>
+              <td className="tg-73oq h20" colSpan="2">
+                <div className="w50">
+                  Business department comments:
+                  <p />
+                  <div className="sign">
+                    Signature of the person in charge:
+                    <br />
+                    (Stamp)
+                  </div>
+                  <div className="date">&nbsp;year&emsp;month&emsp;day</div>
+                </div>
+              </td>
+              <td className="tg-73oq" colSpan="2">
+                <div className="w50">
+                  Ministry of Science and Technology Information:
+                  <p />
+                  <div className="sign">
+                    Signature of the person in charge:
+                    <br />
+                    (Stamp)
+                  </div>
+                  <div className="date">&nbsp;year&emsp;month&emsp;day</div>
+                </div>
+              </td>
+            </tr>
           </tbody>
         </table>
       </div>

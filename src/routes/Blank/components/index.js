@@ -10,7 +10,7 @@ export default class extends BaseComponent {
   render() {
     return (
       <Layout className="full-layout page blank-page">
-        <Content className={style.className}>空白页</Content>
+        <Content className={style.className}>blank page</Content>
       </Layout>
     );
   }

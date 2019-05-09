@@ -2,7 +2,7 @@ import { dynamicWrapper, createRoute } from '@/utils/core';
 
 const routesConfig = app => ({
   path: '/baseComponent',
-  title: '组件父类',
+  title: 'Component parent class',
   component: dynamicWrapper(app, [], () => import('./components'))
 });
 
